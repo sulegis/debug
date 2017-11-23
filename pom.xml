@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.supermap.local</groupId>
   <artifactId>repository</artifactId>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.3-SNAPSHOT</version>
   <scm>
     <connection>scm:git:https://github.com/sulegis/debug.git</connection>
     <developerConnection>scm:git:https://github.com/sulegis/debug.git</developerConnection>
@@ -41,7 +41,7 @@
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<!-- releaseProfiles configuration will actually force a Maven profile 
-						ï¿½C the `releases` profile ï¿½C to become active during the Release process. 
+						¨C the `releases` profile ¨C to become active during the Release process. 
 					<releaseProfiles>releases</releaseProfiles> -->
 					<username>sulegis</username>  
 					 <password>sule425118</password>
