@@ -15,12 +15,12 @@
 			<name>Chengdu deoploy</name>
 			<url>http://192.168.20.142:81/nexus/content/repositories/releases/</url>
 		</repository>
-		<!-- use the following if you ARE using a snapshot version.
+		<!-- use the following if you ARE using a snapshot version. -->
 		<snapshotRepository>
 			<id>nexussnapshot</id>
 			<name>Chengdu deoploy</name>
 			<url>http://192.168.20.142:81/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository> -->
+		</snapshotRepository>
 	</distributionManagement>
 	<dependencies>
 			<dependency>
@@ -54,7 +54,36 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>nexus-releases</serverId>
+					<nexusUrl>http://192.168.20.142:81/</nexusUrl>
+					<skipStaging>true</skipStaging>
+				</configuration>
+			</plugin>
 		</plugins>
-		 </pluginManagement>
+	 </pluginManagement>
+     <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+			</plugin>
+     </plugins>
 	</build>
 </project>
