@@ -2,10 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.supermap.local</groupId>
   <artifactId>repository</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.2-SNAPSHOT</version>
   <scm>
+    <connection>scm:git:https://github.com/sulegis/debug.git</connection>
     <developerConnection>scm:git:https://github.com/sulegis/debug.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
 		<!-- use the following if you're not using a snapshot version. -->
@@ -38,6 +38,10 @@
 		<!--			  <username>sulele@supermap.com</username> 
 					  <password>sule654321</password> 
 					  <autoVersionSubmodules>true</autoVersionSubmodules> -->
+					     <username>sulegis</username>  
+						 <password>sule425118</password>
+						 <tagBase>${project.artifactId}-${project.version}</tagBase>
+						 <goals>-f pom.xml deploy</goals> 
 				  </configuration>
 				</plugin>
 		</plugins>
